@@ -4,6 +4,7 @@ readme = "README.md"
 name = "sim_fft"
 version = "0.1.0"
 description = "simple fft"
+license = "MIT"
 
 [dependencies]
 
