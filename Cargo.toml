@@ -3,7 +3,7 @@ edition = "2021"
 readme = "README.md"
 name = "sim_fft"
 version = "0.1.0"
-description = "simple fft"
+description = "sim-fft is an easy to use Fast Fourier Transform library primarily meant for embedded systems and no_std environments."
 license = "MIT"
 
 [dependencies]
