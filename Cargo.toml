@@ -1,0 +1,29 @@
+[package]
+edition = "2021"
+readme = "README.md"
+name = "sim_fft"
+version = "0.1.0"
+
+[dependencies]
+
+libm = "0.2.15"
+defmt = "1.0.1"
+defmt-rtt = "1.0.0"
+
+
+[lib]
+name = "sim_fft"
+path = "src/lib.rs"
+
+[profile.dev]
+codegen-units = 1
+debug = 2
+debug-assertions = true # <-
+incremental = false
+opt-level = 'z'         # <-
+overflow-checks = true  # <-
+
+[profile.release]
+codegen-units = 1 # better optimizations
+debug = true      # symbols are nice and they don't increase the size on Flash
+lto = true        # better optimizations

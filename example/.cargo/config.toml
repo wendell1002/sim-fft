@@ -1,0 +1,18 @@
+[target.thumbv7m-none-eabi]
+runner = "probe-rs run --chip STM32F103CB"
+
+rustflags = [
+  "-C",
+  "linker=flip-link",
+  "-C",
+  "link-arg=-Tdefmt.x",
+  # "-C", "linker=arm-none-eabi-gcc",
+  # "-C",
+  # "link-arg=-Wl,-Tlink.x",
+  # "-C", "link-arg=-nostartfiles",
+]
+
+[env]
+DEFMT_LOG = "debug"
+[build]
+target = "thumbv7m-none-eabi"

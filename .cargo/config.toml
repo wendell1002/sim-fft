@@ -1,0 +1,4 @@
+[env]
+DEFMT_LOG = "debug"
+
+[build]
